@@ -34,14 +34,32 @@ def entertaiment(entertaiment_options):
     return selected_entertaiment
 
 
-a = destinations(destination_options)
-print(a)
+my_destination = destinations(destination_options)
+print(my_destination)
 
-b = restaurants(restaurant_options)
-print(b)
+my_restaurant = restaurants(restaurant_options)
+print(my_restaurant)
 
-c = transportation(transportation_options)
-print(c)
+my_transportation = transportation(transportation_options)
+print(my_transportation)
 
-d = entertaiment(entertaiment_options)
-print(d)
+my_entertaiment = entertaiment(entertaiment_options)
+print(my_entertaiment)
+
+
+confirmation = 'n'
+while confirmation == 'n':
+    confirmation = input('Would you like to complete your day trip? y/n: ')
+    if confirmation != 'n':
+        break
+    ask_for_update = input('Type which option would you like to change? destination/restaurant/transportation/entertaiment: ')
+    if ask_for_update == 'destination':
+        my_destination = destinations(destination_options)
+    elif ask_for_update == 'restaurant':
+        my_restaurant = restaurants(restaurant_options)
+    elif ask_for_update == 'transportation':
+        my_transportation = transportation(transportation_options)
+    elif ask_for_update == 'entertaiment':
+        my_entertaiment = entertaiment(entertaiment_options)
+
+print(my_destination, my_restaurant, my_transportation, my_entertaiment)
