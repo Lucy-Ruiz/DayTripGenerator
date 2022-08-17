@@ -1,9 +1,9 @@
 import random
 
 destination_options = ['Tokyo', 'Berlin', 'Paris', 'Brussels', 'Barcelona', 'Dublin', 'Seoul']
-restaurant_options = ['High end', 'Convinience store', 'Café', 'Food truck', 'Fast food']
-transportation_options = ['Train', 'Bus', 'Bicycle', 'Subway', 'Car rental', 'Taxi']
-entertaiment_options = ['Museums', 'Theater', 'Markets', 'Concerts', 'Picnic']
+restaurant_options = ['local food restaurant', 'high end restaurant', 'convinience store', 'café', 'food truck', 'tavern']
+transportation_options = ['train', 'bus', 'bicycle', 'subway', 'car rental', 'taxi']
+entertaiment_options = ['museums', 'theater', 'markets', 'concerts', 'picnic']
 
 def destinations(destination_options):
     confirmation = 'n'
@@ -35,16 +35,16 @@ def entertaiment(entertaiment_options):
 
 
 my_destination = destinations(destination_options)
-print(my_destination)
+print(f'Your destination is {my_destination}')
 
 my_restaurant = restaurants(restaurant_options)
-print(my_restaurant)
+print(f'You may enjoy eating at a {my_restaurant}')
 
 my_transportation = transportation(transportation_options)
-print(my_transportation)
+print(f'Transportation mode in the city is {my_transportation}')
 
 my_entertaiment = entertaiment(entertaiment_options)
-print(my_entertaiment)
+print(f'Enjoy your time {my_entertaiment}')
 
 
 confirmation = 'n'
@@ -62,4 +62,4 @@ while confirmation == 'n':
     elif ask_for_update == 'entertaiment':
         my_entertaiment = entertaiment(entertaiment_options)
 
-print(my_destination, my_restaurant, my_transportation, my_entertaiment)
+print(f'Your next trip will be in {my_destination}, you can enjoy the city via {my_transportation} and going to {my_entertaiment}. When feeling hungry you can go to a {my_restaurant}')
