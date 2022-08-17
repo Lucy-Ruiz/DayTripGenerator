@@ -13,7 +13,6 @@ def get_random_selection(list_of_options, string_output, result_text):
     print(f'{result_text} {selected_choice}')
     return selected_choice
 
-
 def final_day_trip(destination, restaurant, transportation, entertaiment):
     confirmation = 'n'
     while confirmation == 'n':
@@ -33,11 +32,7 @@ def final_day_trip(destination, restaurant, transportation, entertaiment):
     print(result)
 
 my_destination = get_random_selection(destination_options, 'Would you like the destination of', 'Your destination is')
-
 my_restaurant = get_random_selection(restaurant_options, 'Would you like to eat at', 'Your foodie match is')
-
 my_transportation = get_random_selection(transportation_options, 'Would you like to move through the city in', 'Your transportation mode is')
-
 my_entertaiment = get_random_selection(entertaiment_options, 'Would you like to go to', 'Enjoy your time in the')
-
 final_day_trip(my_destination, my_restaurant, my_transportation, my_entertaiment)
